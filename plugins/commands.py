@@ -59,10 +59,10 @@ async def showinfo(client, message):
             try:
                 checkid = int(id)
             except:
-                await message.reply_text("__Enter a valid USER ID__", quote=True, parse_mode="md")
+                await message.reply_text("__Geçerli bir KULLANICI KIMLIĞI girin__", quote=True, parse_mode="md")
                 return
         else:
-            await message.reply_text("__Enter a valid USER ID__", quote=True, parse_mode="md")
+            await message.reply_text("__Geçerli bir KULLANICI KIMLIĞI girin__", quote=True, parse_mode="md")
             return           
 
         if Config.SAVE_USER == "yes":
@@ -78,7 +78,7 @@ async def showinfo(client, message):
                 pass
 
         if not name:
-            await message.reply_text("__USER Details not found!!__", quote=True, parse_mode="md")
+            await message.reply_text("__KULLANICI Ayrıntıları bulunamadı!!__", quote=True, parse_mode="md")
             return
     else:
         if message.reply_to_message:
@@ -119,7 +119,7 @@ async def bot_status(client,message):
 
     if Config.SAVE_USER == "yes":
         users = await all_users()
-        userstats = f"> __**{users} users have interacted with your bot!**__\n\n"
+        userstats = f"> __**{users} kullanıcılar botunuzla etkileşime girdi!**__\n\n"
     else:
         userstats = ""
 
@@ -243,12 +243,12 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("How to Deploy?", url="https://youtu.be/hkmc3e7U7R4"),
+                    InlineKeyboardButton("Yardım için tıkla.", url="https://t.me/Saygisizlar"),
                     InlineKeyboardButton("About Me", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
+                    InlineKeyboardButton("Kanalım", url="https://t.me/WixstraGod"),
+                    InlineKeyboardButton("Grubum", url="https://t.me/Saygisizlar")
                 ]
             ]
         ),
@@ -265,7 +265,7 @@ async def about(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Unlimited-Filter-Bot")
+                        "SOURCE CODE", url="https://github.com/cancinconntg/Unlimited-Filter-Bot")
                 ],
                 [
                     InlineKeyboardButton("BACK", callback_data="help_data"),
