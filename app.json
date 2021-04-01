@@ -1,6 +1,6 @@
 {
-    "name": "UNLIMITED FILTER BOT",
-    "description": "An unlimited filter bot using Mongo DB",
+    "name": "SAYGISIZLAR FILTER BOT",
+    "description": "Mongo DB kullanan sınırsız filtre botu",
     "logo": "https://telegra.ph/file/71aaa621508cd696ab538.jpg",
     "keywords": [
         "UNLIMITED",
@@ -8,9 +8,7 @@
         "Telegram Bot",
         "TroJanzHEX"
     ],
-    "website": "https://TroJanzHEX.me",
-    "repository": "https://github.com/TroJanzHEX/Unlimited-Filter-Bot",
-    "success_url": "https://telegram.dog/TroJanzHEX",
+    "repository": "https://github.com/cancinconntg/Unlimited-Filter-Bot",
     "env": {
         "WEBHOOK": {
             "description": "No need to change this field!",
