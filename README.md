@@ -42,21 +42,6 @@
 
 * `/info <userid>`  -  Shows User Information. Also use `/info` as reply to some message for their details!
 
-## Installation
-
-### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cancinconntg/Unlimited-Filter-Bot)
-
-### Deploy in your vps
-```sh
-git clone https://github.com/cancinconntg/Unlimited-Filter-Bot
-cd Unlimited-Filter-Bot
-pip3 install -r requirements.txt
-# <Create config.py appropriately>
-python3 bot.py
-```
-
-
 ## Configs
 
 * TG_BOT_TOKEN  - Get bot token from @BotFather
