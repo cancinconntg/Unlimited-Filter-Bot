@@ -22,9 +22,9 @@ async def addconnection(client,message):
             cmd, group_id = message.text.split(" ", 1)
         except:
             await message.reply_text(
-                "<b>Enter in correct format!</b>\n\n"
+                "<b>Doğru biçimde girin!</b>\n\n"
                 "<code>/connect groupid</code>\n\n"
-                "<i>Get your Group id by adding this bot to your group and use  <code>/id</code></i>",
+                "<i>Bu botu grubunuza ekleyerek Grup kimliğinizi alın ve  <code>/id</code></i>",
                 quote=True
             )
             return
@@ -37,12 +37,12 @@ async def addconnection(client,message):
         if (st.status == "administrator") or (st.status == "creator") or (str(userid) in Config.AUTH_USERS):
             pass
         else:
-            await message.reply_text("You should be an admin in Given group!", quote=True)
+            await message.reply_text("Verilen grupta yönetici olmalısınız!", quote=True)
             return
     except Exception as e:
         print(e)
         await message.reply_text(
-            "Invalid Group ID!\n\nIf correct, Make sure I'm present in your group!!",
+            "Geçersiz Grup Kimliği!\n\nDoğruysa, grubunuzda bulunduğumdan emin olun!!",
             quote=True
         )
         return
@@ -56,7 +56,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"Sucessfully connected to **{title}**\nNow manage your group from my pm !",
+                    f"Başarıyla bağlı **{title}**\nŞimdi grubunuzu benim pm'imden yönetin !",
                     quote=True,
                     parse_mode="md"
                 )
@@ -68,11 +68,11 @@ async def addconnection(client,message):
                     )
             else:
                 await message.reply_text(
-                    "You're already connected to this chat!",
+                    "Bu sohbete zaten bağlısınız!",
                     quote=True
                 )
         else:
-            await message.reply_text("Add me as an admin in group", quote=True)
+            await message.reply_text("Beni gruba yönetici olarak ekleyin.", quote=True)
     except Exception as e:
         print(e)
         await message.reply_text(
@@ -88,7 +88,7 @@ async def deleteconnection(client,message):
     chat_type = message.chat.type
 
     if chat_type == "private":
-        await message.reply_text("Run /connections to view or disconnect from groups!", quote=True)
+        await message.reply_text("Grupları görüntülemek veya gruplarla bağlantıyı kesmek için /connections çalıştır!", quote=True)
 
     elif (chat_type == "group") or (chat_type == "supergroup"):
         group_id = message.chat.id
@@ -99,9 +99,9 @@ async def deleteconnection(client,message):
 
         delcon = await delete_connection(str(userid), str(group_id))
         if delcon:
-            await message.reply_text("Successfully disconnected from this chat", quote=True)
+            await message.reply_text("Bu sohbetle bağlantı başarıyla kesildi", quote=True)
         else:
-            await message.reply_text("This chat isn't connected to me!\nDo /connect to connect.", quote=True)
+            await message.reply_text("Bu sohbet benimle bağlantılı değil.!\nBağlanmak için yapın connect.", quote=True)
 
 
 @Client.on_message(filters.private & filters.command(["connections"]))
@@ -111,7 +111,7 @@ async def connections(client,message):
     groupids = await all_connections(str(userid))
     if groupids is None:
         await message.reply_text(
-            "There are no active connections!! Connect to some groups first.",
+            "Etkin bağlantı yok!! Önce bazı gruplara bağlanmalıdır.",
             quote=True
         )
         return
@@ -136,7 +136,7 @@ async def connections(client,message):
             pass
     if buttons:
         await message.reply_text(
-            "Your connected group details ;\n\n",
+            "Bağlı grup bilgileriniz ;\n\n",
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
         )
