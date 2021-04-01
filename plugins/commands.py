@@ -244,7 +244,7 @@ async def help(client, message):
             [
                 [
                     InlineKeyboardButton("Yardım için tıkla.", url="https://t.me/Saygisizlar"),
-                    InlineKeyboardButton("About Me", callback_data="about_data")
+                    InlineKeyboardButton("Benim Hakkımda", callback_data="about_data")
                 ],
                 [
                     InlineKeyboardButton("Kanalım", url="https://t.me/WixstraGod"),
