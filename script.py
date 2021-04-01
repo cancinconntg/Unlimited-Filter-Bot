@@ -3,58 +3,58 @@ class Script(object):
     START_MSG = """<b>Hy {},
 
 I'm an advanced filter bot with many capabilities!
-There is no practical limits for my filtering capacity :)
+There are no practical limits for my filtering capacity :)
 
-See <i>/help</i> for commands and more details.</b>
+<i>/help</i> yazarak detaylı bilgi alabilirsiniz.</b>
 """
 
 
     HELP_MSG = """
-<i>Add me as admin in your group and start filtering :)</i>
+<i>Beni grubunuza yönetici olarak ekleyin ve filtrelemeye başlayın :)</i>
 
 
-<b>Basic Commands;</b>
+<b>Basit Komutlar;</b>
 
-/start - Check if I'm alive!
-/help - Command help
-/about - Something about me!
-
-
-<b>Filter Commands;</b>
-
-<code>/add name reply</code>  -  Add filter for name
-
-<code>/del name</code>  -  Delete filter
-
-<code>/delall</code>  -  Delete entire filters (Group Owner Only!)
-
-<code>/viewfilters</code>  -  List all filters in chat
+/start - Hayatta olup olmadığımı kontrol et!
+/help - Komut yardımı
+/about - Benimle ilgili bir şey!
 
 
-<b>Connection Commands;</b>
+<b>Filter Komutları;</b>
 
-<code>/connect groupid</code>  -  Connect your group to my PM. You can also simply use,
-<code>/connect</code> in groups.
+<code>/add selam as</code>  -  Filtre ekle
 
-<code>/connections</code>  -  Manage your connections.
+<code>/del name</code>  -  Filtre Sil
 
+<code>/delall</code>  -  Tüm filtreleri sil. (Grup Sahibi) 
 
-<b>Extras;</b>
-
-/status  -  Shows current status of your bot (Auth User Only)
-
-/id  -  Shows ID information
-
-<code>/info userid</code>  -  Shows User Information. Use <code>/info</code> as reply to some message for their details!
+<code>/viewfilters</code>  -  Tüm filtreleri görüntüle.
 
 
-<b>© @TroJanzHEX</b>
+<b>Bağlanma Komutu;</b>
+
+<code>/connect groupid</code>  -  Grubunuzu başbakanıma bağlayın. Ayrıca basitçe kullanabilirsiniz,
+<code>/connect</code> gruba gönder
+
+<code>/connections</code>  -  Bağlantılarınızı yönetin.
+
+
+<b>Extra;</b>
+
+/status  -  Botunuzun geçerli durumunu gösterir (Yalnızca Kimlik Doğrulama Kullanıcısı)
+
+/id  -  Kimlik bilgilerini gösterir
+
+<code>/info userid</code>  -  Kullanıcı Bilgilerini Gösterir. <code>/info</code> ayrıntıları için bazı iletilere yanıt olarak!
+
+
+<b>© @Saygisizlar</b>
 """
 
 
-    ABOUT_MSG = """⭕️<b>My Name : TroJanz Filter Bot</b>
+    ABOUT_MSG = """⭕️<b>My Name : Saygısızlar Filter Bot</b>
 
-⭕️<b>Creater :</b> @TroJanzHEX    
+⭕️<b>Creater :</b> @SaygisizlarSahip  
 
 ⭕️<b>Language :</b> <code>Python3</code>
 
