@@ -47,12 +47,12 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("How to Deploy?", url="https://youtu.be/hkmc3e7U7R4"),
-                    InlineKeyboardButton("About Me", callback_data="about_data")
+                    InlineKeyboardButton("Yardım için tıkla.", url="https://t.me/Saygisizlar"),
+                    InlineKeyboardButton("Benim Hakkımda", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
+                    InlineKeyboardButton("Kanalım", url="https://t.me/WixstraGod"),
+                    InlineKeyboardButton("Grubum", url="https://t.me/Saygisizlar")
                 ]
             ]
         )
@@ -70,7 +70,7 @@ async def cb_handler(client, query):
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Unlimited-Filter-Bot")
+                        "SOURCE CODE", url="https://github.com/cancinconntg/Unlimited-Filter-Bot")
                 ],
                 [
                     InlineKeyboardButton("BACK", callback_data="help_data"),
@@ -102,11 +102,11 @@ async def cb_handler(client, query):
                     chat = await client.get_chat(grpid)
                     title = chat.title
                 except:
-                    await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
+                    await query.message.edit_text("Grubunuzda bulunduğumdan emin olun!!", quote=True)
                     return
             else:
                 await query.message.edit_text(
-                    "I'm not connected to any groups!\nCheck /connections or connect to any groups",
+                    "Hiçbir grupla bağlantım yok.!\nBağlantıları denetleyin veya herhangi bir gruba bağlanın",
                     quote=True
                 )
                 return
@@ -122,7 +122,7 @@ async def cb_handler(client, query):
         if (st.status == "creator") or (str(userid) in Config.AUTH_USERS):    
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("You need to be Group Owner or an Auth User to do that!",show_alert=True)
+            await query.answer("Bunu yapmak için Grup Sahibi veya Kimlik Doğrulama Kullanıcısı olmanız gerekir!",show_alert=True)
     
     elif query.data == "delallcancel":
         userid = query.from_user.id
@@ -142,7 +142,7 @@ async def cb_handler(client, query):
                 except:
                     pass
             else:
-                await query.answer("Thats not for you!!",show_alert=True)
+                await query.answer("Bu senin için değil.!!",show_alert=True)
 
 
     elif "groupcb" in query.data:
@@ -243,7 +243,7 @@ async def cb_handler(client, query):
         groupids = await all_connections(str(userid))
         if groupids is None:
             await query.message.edit_text(
-                "There are no active connections!! Connect to some groups first.",
+                "Etkin bağlantı yok!! Önce bazı gruplara bağlanmalısın.",
             )
             return
         buttons = []
