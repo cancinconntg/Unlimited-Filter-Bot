@@ -20,15 +20,15 @@
         },
         "API_HASH": {
             "description": "Your API Hash from my.telegram.org or @UseTGXBot",
-            "value": ""
+            "value": "a2ac9d4af5ce6d6e297205eb4bfa704e"
         },
         "API_ID": {
             "description": "Your APP ID from my.telegram.org or @UseTGXBot",
-            "value": ""
+            "value": "23544287"
         },
         "AUTH_USERS": {
             "description": "ID of users that can use the bot commands",
-            "value": ""
+            "value": "5699982302, 6145177244"
         },
         "DATABASE_URI": {
             "description": "Database URL from https://cloud.mongodb.com/",
