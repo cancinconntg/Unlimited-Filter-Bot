@@ -1,8 +1,6 @@
 # Saygısızlar Filter Bot
-#### With Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
+The easiest way to deploy this Bot
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/cancinconntg/Unlimited-Filter-Bot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 ## Neredeyse filtrelenmemiş filtrelere sahip gelişmiş bir Filtre Botu!
 
